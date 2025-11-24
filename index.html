@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open House - Thiago</title>
+    <!-- Carregando Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS: TEMA "PRATEADO COM BRILHO" */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --silver-light: #f3f4f6;
+            --silver-dark: #e5e7eb;
+            --silver-accent: #9ca3af;
+            --text-color: #1f2937;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fundo Gradiente Prateado */
+            background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%); 
+            background-attachment: fixed; /* Fixa o gradiente para sensação de profundidade */
+            color: var(--text-color);
+        }
+
+        .shiny-card {
+            background-color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Efeito de brilho sutil */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 
+                        0 0 0 1px rgba(156, 163, 175, 0.5); /* Anel prateado */
+        }
+
+        .shiny-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05),
+                        0 0 0 2px rgba(156, 163, 175, 0.8); /* Brilho maior no hover */
+        }
+
+        .shopee-button {
+            background: linear-gradient(145deg, #f9f9f9, #d1d5db);
+            color: #4b5563;
+            border: 1px solid #9ca3af;
+            transition: all 0.3s ease;
+        }
+
+        .shopee-button:hover {
+            background: linear-gradient(145deg, #e5e7eb, #9ca3af);
+            color: #1f2937;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transform: scale(1.02);
+        }
+
+        .item-placeholder {
+            background-color: var(--silver-dark);
+            border: 1px dashed var(--silver-accent);
+        }
+        /* Garantindo que as imagens preencham o placeholder */
+        .item-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem se ajuste bem */
+            border-radius: 0.5rem;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto">
+
+        <!-- TÍTULO PRINCIPAL -->
+        <header class="text-center mb-10 p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+            <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-800 mb-3">
+                Open House do TH
+            </h1>
+        </header>
+
+        <!-- TEXTO DE INTRODUÇÃO -->
+        <section class="mb-10 text-center">
+            <p class="text-xl sm:text-2xl text-gray-600 leading-relaxed font-light">
+                Estou de casa nova e gostaria que você participasse desse momento de novas conquistas.
+            </p>
+        </section>
+
+        <!-- SUBTÍTULO E INSTRUÇÕES -->
+        <h2 class="text-4xl font-bold tracking-tight text-gray-800 mb-6 border-b-2 border-gray-300 pb-2">
+            LISTA DE PRESENTES:
+        </h2>
+
+        <div class="mb-8 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-red-600">
+                ⚠️ Atenção: Cada item abaixo é clicável e o link irá te direcionar diretamente para a página do produto na Shopee.
+            </p>
+        </div>
+
+        <!-- LISTA DE PRESENTES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Item 1: Toalha de mesa (preto café) -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8c0lsw95fdd5c.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">TOALHA DE MESA</h3>
+                    <p class="text-gray-500 mb-3 text-sm">(Cor: Café Preto; Tamanho: 2,00 x 1,40)</p>
+                    <a href="https://br.shp.ee/jYuBbkE" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2: Toalha de mesa (térmica) -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcxnhjsy4ks2d7.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">TOALHA DE MESA TÉRMICA</h3>
+                    <p class="text-gray-500 mb-3 text-sm">(Tamanho: 2,00 x 1,40)</p>
+                    <a href="https://br.shp.ee/hLATPRJ" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 3: Mini máquina seladora -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-824ix-me4at7rihtz5ea@resize_w450_nl.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">MINI MÁQUINA SELADORA</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Loja Megatech</p>
+                    <a href="https://br.shp.ee/yyH1kaf" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 4: Descascador e fatiador -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134201-7r98o-ltfo95w8kzak1a.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">DESCASCADOR E FATIADOR</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Utensílio indispensável.</p>
+                    <a href="https://br.shp.ee/zfzdYPM" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 5: Kit porta escova / porta sabonete líquido (Preto) -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-md27ay6bkjsi6b.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">KIT PORTA ESCOVA | SABONETE LÍQUIDO</h3>
+                    <p class="text-gray-500 mb-3 text-sm">(Cor: Preto)</p>
+                    <a href="https://br.shp.ee/NzrEgb2" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 6: Porta utensílios -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m0q0i94vtcps89.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">PORTA UTENSÍLIOS</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Organização e estilo.</p>
+                    <a href="https://br.shp.ee/PzinrFN" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 7: Fuê preto -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lwvqe8d8arpb3b.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">FUÊ PRETO</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Essencial para misturas.</p>
+                    <a href="https://br.shp.ee/f7wUGMF" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 8: Escorredor de prato (preto) -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-me03uauy1t6o75.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">ESCORREDOR DE PRATOS</h3>
+                    <p class="text-gray-500 mb-3 text-sm">(Cor: Preto)</p>
+                    <a href="https://br.shp.ee/VkzAXDs" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 9: Porta chave / suporte chaveiro (preto/freijó) -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg78zthtzklc08.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">PORTA CHAVE</h3>
+                    <p class="text-gray-500 mb-3 text-sm">(Cor: Preto/Freijó)</p>
+                    <a href="https://br.shp.ee/JG5FT2N" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 10: Porta detergente com suporte para bucha -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mdenmsbe9psh51.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">PORTA DETERGENTE & BUCHA</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Pia organizada.</p>
+                    <a href="https://br.shp.ee/a5sP2K2" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 11: Cesto para roupas sujas -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd63-lvxexu73hkyl8f.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">CESTO PARA ROUPAS SUJAS</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Para lavanderia.</p>
+                    <a href="https://br.shp.ee/Qucic6M" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 12: Kit tábua de carne -->
+            <div class="shiny-card p-4 rounded-xl flex items-center space-x-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg item-placeholder flex items-center justify-center text-sm text-gray-600">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rbn1-lpqvw82gzclg3b.webp" onerror="this.onerror=null; this.src='https://placehold.co/96x96/e5e7eb/9ca3af?text=ERRO';">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">TÁBUA DE CARNE</h3>
+                    <p class="text-gray-500 mb-3 text-sm">Perfeito para o churrasco.</p>
+                    <a href="https://br.shp.ee/F8CX9aD" target="_blank" rel="noopener noreferrer" class="shopee-button px-4 py-2 rounded-full text-sm font-medium inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ver na Shopee
+                    </a>
+                </div>
+            </div>
+
+        </div> <!-- Fim da lista de presentes -->
+
+        <!-- INFORMAÇÃO FINAL -->
+        <div class="mt-12 mb-8 p-4 bg-red-100 border-l-4 border-red-700 rounded-lg shadow-md">
+            <p class="text-xl font-semibold text-red-700">
+                ⭐ Indispensável a escolha do produto de acordo com o que foi solicitado na lista.
+            </p>
+        </div>
+
+        <!-- AGRADECIMENTO -->
+        <footer class="text-center mt-10 py-4 text-gray-500 text-sm">
+            <p>Obrigado por fazer parte disso! 🥰</p>
+        </footer>
+
+    </div>
+    
+    <script>
+        // Adicionei um tratamento de erro simples para as imagens caso o link não funcione mais.
+        // O código de fallback de imagem está diretamente no atributo `onerror` das tags <img>.
+    </script>
+</body>
+</html>
